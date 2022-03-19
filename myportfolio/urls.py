@@ -23,7 +23,6 @@ from django.views.static import serve  #追加
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
-    path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),  #追加
 ]
 
 
