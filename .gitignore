@@ -1,0 +1,10 @@
+*.pyc
+*.pot
+*.log
+*~
+/.vscode
+__pycache__/
+db-volumes/
+db.sqlite3
+.DS_Store
+settings_local.py

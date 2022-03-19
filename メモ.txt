@@ -1,0 +1,23 @@
+参考サイト
+djangoでポートフォリオサイトを作成する
+https://qiita.com/Tett/items/3d7d63a95a9935cc200c
+
+◆トップページに作品データを表示
+work_data = Work.objects.order_by('-id')ではなくwork_data = Work.objects.all().order_by('-id')でもいける
+
+
+
+その他
+1. 【Django】クラスベースビュー(Class-based View)の操作入門
+    https://qiita.com/ryuunosuke0905/items/1134eb4ed29cc249a74d
+2. 【django-cleanup】画像等のファイルを自動的に削除する
+    https://noauto-nolife.com/post/django-cleanup/
+3. クラスベースビューで複数の変数をテンプレートに渡す
+    https://chuna.tech/detail/46/
+4. Djangoでお問い合わせフォームを作成する
+    https://medium.com/@kjmczk/django-contact-form-5a35d43b00a6
+5. Django本番環境でメディアファイル公開に必要な設定
+    https://sinyblog.com/django/media_file_001/
+6. コンテンツ量が少ない時、フッターを画像下部に表示させるには？
+    https://senoweb.jp/note/footer-position/
+7. Django本番環境でメディアファイル公開に必要な設定

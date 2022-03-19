@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+<h3 class="mb-4">Works</h3>
+<div class="row mb-5">
+    {% for work in work_data %}
+        <div class="col-6 col-md-3 mb-4">
+            <div class="card work-thumbnail">
+                {% if work.thumbnail %}
+                    <img src="{{ work.thumbnail.url }}" alt="" class="work-img">
+                {% else %}
+                    <img src="{{ work.image.url }}" alt="" class="work-img">
+                {% endif %}
+                <div class="work-title text-center">
+                    <a class="mb-0">
+                        {{ work.title }}
+                    </a>
+                </div>
+                <a href="{% url 'detail' work.id %}" class="stretched-link work"></a>
+            </div>
+        </div>
+    {% endfor%}
+</div>
+
+{% endblock%}
