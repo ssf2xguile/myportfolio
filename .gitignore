@@ -6,5 +6,5 @@
 __pycache__/
 db-volumes/
 db.sqlite3
-.env
 .DS_Store
+.env
