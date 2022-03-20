@@ -5,7 +5,12 @@ https://qiita.com/Tett/items/3d7d63a95a9935cc200c
 ◆トップページに作品データを表示
 work_data = Work.objects.order_by('-id')ではなくwork_data = Work.objects.all().order_by('-id')でもいける
 
-
+インストールライブラリ
+・Django 3.2.12.
+・django-widget-tweaks 1.4.8
+・Pillow 8.1.0
+・django-cluanup 6.0.0
+・django-environ 0.8.1
 
 その他
 1. 【Django】クラスベースビュー(Class-based View)の操作入門
