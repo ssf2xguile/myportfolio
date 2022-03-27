@@ -20,14 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# Git管理するために秘密値、デバック、許可ホストを見せないようにする
-import environ
-env = environ.Env()
-env.read_env('.env')
-
-SECRET_KEY = env('SECRET_KEY')
-DEBUG = env.bool('DEBUG')
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+SECRET_KEY = 'django-insecure-**p_!lcgmg=ptz)&l)yy6meu+(^!-yoq6h)=))p^4%=^miiamh'
+DEBUG = True
+ALLOWED_HOSTS = []
 
 
 
@@ -134,12 +129,4 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #開発環境用メール設定
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-#本番環境用メール設定
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
