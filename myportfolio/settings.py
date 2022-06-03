@@ -133,13 +133,5 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#開発環境用メール設定
-#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-#本番環境用メール設定
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-EMAIL_USE_TLS = True
+#開発兼本番環境用メール設定
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
